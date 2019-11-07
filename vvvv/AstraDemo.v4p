@@ -7,9 +7,9 @@
    <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="UploadImage (DX11.Texture)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0882-gda69dcbd15\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="1060" top="3270" width="100" height="100">
+   <BOUNDS type="Node" left="1040" top="1930" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="1060" top="3270" width="2000" height="2000">
+   <BOUNDS type="Box" left="1040" top="1930" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Data" visible="1" slicecount="1" values="||">
    </PIN>
@@ -21,7 +21,7 @@
    </BOUNDS>
    <BOUNDS type="Box" left="1060" top="4630" width="4000" height="3000">
    </BOUNDS>
-   <BOUNDS type="Window" left="11430" top="10270" width="4790" height="4950">
+   <BOUNDS type="Window" left="16110" top="10450" width="4790" height="4950">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -53,19 +53,19 @@
    </PIN>
    <PIN pinname="Spread Count" visible="1">
    </PIN>
+   <PIN pinname="Color Default" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="UploadBuffer (DX11.Buffer)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0882-gda69dcbd15\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadBuffer (DX11.Buffer)" componentmode="Hidden" id="55">
-   <BOUNDS type="Node" left="4050" top="3270" width="100" height="100">
+   <BOUNDS type="Node" left="1580" top="1540" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="4050" top="3270" width="2000" height="2000">
+   <BOUNDS type="Box" left="1580" top="1540" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Buffer Description" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Buffer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="55" srcpinname="Buffer" dstnodeid="56" dstpinname="Position 3D Buffer">
-   </LINK>
    <NODE systemname="UniformScale (Transform)" nodename="UniformScale (Transform)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="3880" top="2830" width="100" height="100">
    </BOUNDS>
@@ -111,9 +111,11 @@
    </PIN>
    <PIN pinname="Saturation" slicecount="1" values="1">
    </PIN>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
    </NODE>
-   <LINK srcnodeid="61" srcpinname="Texture Out" dstnodeid="69" dstpinname="Texture In">
-   </LINK>
    <LINK srcnodeid="69" srcpinname="Texture Out" dstnodeid="60" dstpinname="Texture In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70">
@@ -199,7 +201,7 @@
    <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="56" dstpinname="Size Default">
    </LINK>
    <NODE systemname="AstraVVVV (Devices)" filename="..\VL.Devices.Astra.vl" nodename="AstraVVVV (Devices)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="530" top="650" width="100" height="100">
+   <BOUNDS type="Node" left="530" top="650" width="1380" height="270">
    </BOUNDS>
    <PIN pinname="Value" visible="1">
    </PIN>
@@ -207,19 +209,127 @@
    </PIN>
    <PIN pinname="Frame 0" visible="1">
    </PIN>
+   <PIN pinname="Frame" visible="1">
+   </PIN>
    </NODE>
    <NODE systemname="FrameSplit (Devices)" filename="..\VL.Devices.Astra.vl" nodename="FrameSplit (Devices)" componentmode="Hidden" id="84">
    <BOUNDS type="Node" left="540" top="1180" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="PointCloudBuffer" visible="1">
    </PIN>
+   <BOUNDS type="Box" left="540" top="1180">
+   </BOUNDS>
    </NODE>
    <LINK srcnodeid="84" srcpinname="DepthImage" dstnodeid="61" dstpinname="Data">
    </LINK>
-   <LINK srcnodeid="82" srcpinname="Frame 0" dstnodeid="84" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="84" srcpinname="PointCloudBuffer" dstnodeid="55" dstpinname="Buffer Description">
+   </LINK>
+   <NODE systemname="IOBox (Color)" nodename="IOBox (Color)" componentmode="InABox" id="85">
+   <BOUNDS type="Node" left="4530" top="1130" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="4530" top="1130" width="2250" height="480">
+   </BOUNDS>
+   <PIN pinname="SliceCount Mode" slicecount="1" values="ColsRowsPages">
+   </PIN>
+   <PIN pinname="Rows" slicecount="1" values="2">
+   </PIN>
+   <PIN pinname="Color Input" slicecount="2" values="|0.00000,1.00000,0.00000,1.00000|,|0.85582,0.00000,1.00000,1.00000|">
+   </PIN>
+   <PIN pinname="Color Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="85" srcpinname="Color Output" dstnodeid="56" dstpinname="Color Default">
+   </LINK>
+   <LINK srcnodeid="82" srcpinname="Frame 1" dstnodeid="84" dstpinname="Input">
+   </LINK>
+   <NODE systemname="FrameSplit (Devices)" filename="..\VL.Devices.Astra.vl" nodename="FrameSplit (Devices)" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="1850" top="1180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="PointCloudBuffer" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="1850" top="1180">
+   </BOUNDS>
+   <PIN pinname="DepthImage" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="82" srcpinname="Frame 0" dstnodeid="86" dstpinname="Input">
+   </LINK>
+   <NODE systemname="UploadImage (DX11.Texture)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0882-gda69dcbd15\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture)" componentmode="Hidden" id="87">
+   <BOUNDS type="Node" left="2350" top="1940" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2350" top="1940" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Data" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="DepthImage" dstnodeid="87" dstpinname="Data">
+   </LINK>
+   <NODE systemname="Cons (DX11.Texture 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Texture 2d)" componentmode="Hidden" id="88">
+   <BOUNDS type="Node" left="1050" top="2480" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="1050" top="2480" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="61" srcpinname="Texture Out" dstnodeid="88" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="87" srcpinname="Texture Out" dstnodeid="88" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="88" srcpinname="Output" dstnodeid="69" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="89">
+   <BOUNDS type="Node" left="2040" top="4620" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2040" top="4620" width="4000" height="3000">
+   </BOUNDS>
+   <BOUNDS type="Window" left="20770" top="10530" width="4830" height="4870">
+   </BOUNDS>
+   <PIN pinname="Texture In" visible="1">
+   </PIN>
+   <PIN pinname="Index" slicecount="1" values="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Texture Out" dstnodeid="89" dstpinname="Texture In">
+   </LINK>
+   <NODE systemname="Cons (DX11.Buffer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Cons (DX11.Buffer)" componentmode="Hidden" id="90">
+   <BOUNDS type="Node" left="2410" top="2580" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2410" top="2580" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="UploadBuffer (DX11.Buffer)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0882-gda69dcbd15\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadBuffer (DX11.Buffer)" componentmode="Hidden" id="91">
+   <BOUNDS type="Node" left="2850" top="1530" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="2850" top="1530" width="2000" height="2000">
+   </BOUNDS>
+   <PIN pinname="Buffer Description" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Buffer" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="86" srcpinname="PointCloudBuffer" dstnodeid="91" dstpinname="Buffer Description">
+   </LINK>
+   <LINK srcnodeid="91" srcpinname="Buffer" dstnodeid="90" dstpinname="Input 2">
+   </LINK>
+   <LINK srcnodeid="55" srcpinname="Buffer" dstnodeid="90" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="90" srcpinname="Output" dstnodeid="56" dstpinname="Position 3D Buffer">
    </LINK>
    </PATCH>
