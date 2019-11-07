@@ -7,9 +7,9 @@
    <PACK Name="addonpack" Version="38.1.0">
    </PACK>
    <NODE systemname="UploadImage (DX11.Texture)" filename="%VVVV%\lib\nugets\VL.VVVV.DirectX11.2019.1.0-0882-gda69dcbd15\vvvv\nodes\plugins\VL.VVVV.DirectX11.dll" nodename="UploadImage (DX11.Texture)" componentmode="Hidden" id="61">
-   <BOUNDS type="Node" left="870" top="3800" width="100" height="100">
+   <BOUNDS type="Node" left="1060" top="3270" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="870" top="3800" width="2000" height="2000">
+   <BOUNDS type="Box" left="1060" top="3270" width="2000" height="2000">
    </BOUNDS>
    <PIN pinname="Data" visible="1" slicecount="1" values="||">
    </PIN>
@@ -17,11 +17,11 @@
    </PIN>
    </NODE>
    <NODE systemname="Preview (DX11.Texture)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Preview (DX11.Texture)" componentmode="InAWindow" id="60">
-   <BOUNDS type="Node" left="870" top="5160" width="100" height="100">
+   <BOUNDS type="Node" left="1060" top="4630" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="870" top="5160" width="4000" height="3000">
+   <BOUNDS type="Box" left="1060" top="4630" width="4000" height="3000">
    </BOUNDS>
-   <BOUNDS type="Window" left="13720" top="7400" width="4790" height="4950">
+   <BOUNDS type="Window" left="11430" top="10270" width="4790" height="4950">
    </BOUNDS>
    <PIN pinname="Texture In" visible="1" slicecount="1" values="||">
    </PIN>
@@ -100,28 +100,8 @@
    </PACK>
    <PACK Name="vvvv-ZeroMQ" Version="0.5.7">
    </PACK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="67">
-   <BOUNDS type="Box" left="1670" top="530" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="1670" top="530" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="1">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="Evaluate">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="1">
-   </PIN>
-   </NODE>
    <NODE systemname="HSCB (DX11.TextureFX)" filename="%VVVV%\packs\dx11\nodes\texture11\Filter\HSCB.tfx" nodename="HSCB (DX11.TextureFX)" componentmode="Hidden" id="69">
-   <BOUNDS type="Node" left="870" top="4640" width="100" height="100">
+   <BOUNDS type="Node" left="1060" top="4110" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Contrast" slicecount="1" visible="1" values="-3.59">
    </PIN>
@@ -137,9 +117,9 @@
    <LINK srcnodeid="69" srcpinname="Texture Out" dstnodeid="60" dstpinname="Texture In">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="70">
-   <BOUNDS type="Box" left="1680" top="4230" width="800" height="240">
+   <BOUNDS type="Box" left="1870" top="3700" width="800" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="1680" top="4230" width="0" height="0">
+   <BOUNDS type="Node" left="1870" top="3700" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="-3.59">
    </PIN>
@@ -149,32 +129,6 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="70" srcpinname="Y Output Value" dstnodeid="69" dstpinname="Contrast">
-   </LINK>
-   <NODE systemname="AstraNew (Devices)" filename="..\VL.Devices.Astra.vl" nodename="AstraNew (Devices)" componentmode="Hidden" id="66">
-   <BOUNDS type="Node" left="550" top="1310" width="1190" height="270">
-   </BOUNDS>
-   <PIN pinname="Evaluate" visible="1" pintype="Input" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Enable" visible="1">
-   </PIN>
-   <PIN pinname="Frame" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="67" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Evaluate">
-   </LINK>
-   <NODE systemname="Frame (Devices Split)" filename="..\VL.Devices.Astra.vl" nodename="Frame (Devices Split)" componentmode="Hidden" id="62">
-   <BOUNDS type="Node" left="510" top="3320" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Input" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="DepthImage" visible="1">
-   </PIN>
-   <PIN pinname="ColorImage" visible="1">
-   </PIN>
-   <PIN pinname="PointBuffer" visible="1">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="62" srcpinname="PointBuffer" dstnodeid="55" dstpinname="Buffer Description">
    </LINK>
    <NODE systemname="Camera (Transform Orbit)" filename="%VVVV%\lib\nugets\VL.EditingFramework.2019.1.0-0882-gda69dcbd15\vvvv\nodes\modules\Camera (Transform Orbit).v4p" nodename="Camera (Transform Orbit)" componentmode="Hidden" id="76">
    <BOUNDS type="Node" left="4480" top="5740" width="100" height="100">
@@ -244,42 +198,28 @@
    </NODE>
    <LINK srcnodeid="80" srcpinname="Y Output Value" dstnodeid="56" dstpinname="Size Default">
    </LINK>
-   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="81">
-   <BOUNDS type="Box" left="550" top="530" width="480" height="480">
-   </BOUNDS>
-   <BOUNDS type="Node" left="550" top="530" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
-   </PIN>
-   <PIN pinname="Units" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Precision" slicecount="1" values="4">
-   </PIN>
-   <PIN pinname="Value Type" slicecount="1" values="Boolean">
-   </PIN>
-   <PIN pinname="Behavior" slicecount="1" values="Toggle">
-   </PIN>
-   <PIN pinname="X Input Value" slicecount="1" values="0">
-   </PIN>
-   </NODE>
-   <LINK srcnodeid="81" srcpinname="Y Output Value" dstnodeid="66" dstpinname="Enable">
-   </LINK>
    <NODE systemname="AstraVVVV (Devices)" filename="..\VL.Devices.Astra.vl" nodename="AstraVVVV (Devices)" componentmode="Hidden" id="82">
-   <BOUNDS type="Node" left="3040" top="1530" width="100" height="100">
+   <BOUNDS type="Node" left="530" top="650" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Value" visible="1">
    </PIN>
+   <PIN pinname="Frame 1" visible="1">
+   </PIN>
+   <PIN pinname="Frame 0" visible="1">
+   </PIN>
    </NODE>
-   <NODE systemname="FrameSplit (Devices)" filename="..\VL.Devices.Astra.vl" nodename="FrameSplit (Devices)" componentmode="Hidden" id="83">
-   <BOUNDS type="Node" left="3060" top="2110" width="100" height="100">
+   <NODE systemname="FrameSplit (Devices)" filename="..\VL.Devices.Astra.vl" nodename="FrameSplit (Devices)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="540" top="1180" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
-   <PIN pinname="DepthImage" visible="1">
+   <PIN pinname="PointCloudBuffer" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="82" srcpinname="Value" dstnodeid="83" dstpinname="Input">
+   <LINK srcnodeid="84" srcpinname="DepthImage" dstnodeid="61" dstpinname="Data">
    </LINK>
-   <LINK srcnodeid="83" srcpinname="DepthImage" dstnodeid="61" dstpinname="Data">
+   <LINK srcnodeid="82" srcpinname="Frame 0" dstnodeid="84" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="84" srcpinname="PointCloudBuffer" dstnodeid="55" dstpinname="Buffer Description">
    </LINK>
    </PATCH>
