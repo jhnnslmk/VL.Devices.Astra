@@ -26,8 +26,8 @@
                 <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
               </p:ValueBoxSettings>
             </Pad>
-            <ControlPoint Id="Sr84rcnKNkDPRuFY4eQ31x" Bounds="73,90" />
-            <Node Bounds="48,120,808,941" Id="LICwPkDn6EzNH3fVmXpyoz">
+            <ControlPoint Id="Sr84rcnKNkDPRuFY4eQ31x" Bounds="73,74" />
+            <Node Bounds="48,120,808,942" Id="LICwPkDn6EzNH3fVmXpyoz">
               <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
                 <Choice Kind="ProcessStatefulRegion" Name="Cache" />
@@ -38,9 +38,7 @@
               <Pin Id="EqnMEBxpMBrLrsVJO4YrGZ" Name="Has Changed" Kind="OutputPin" />
               <Patch Id="L11xHn7J1GxQcTORJ6UXjB" ManuallySortedPins="true">
                 <Patch Id="Ix42zb0sWK8OYNPS7l5FlA" Name="Create" ManuallySortedPins="true" />
-                <Patch Id="B66Ysi0dcf3OYjKRNfOVrO" Name="Then" ManuallySortedPins="true">
-                  <Pin Id="IPdKWyETc9uMeizs6ajX1E" Name="Enable Color" Kind="InputPin" Bounds="329,382" />
-                </Patch>
+                <Patch Id="B66Ysi0dcf3OYjKRNfOVrO" Name="Then" ManuallySortedPins="true" />
                 <Patch Id="Q3hI7R7cLfvNAua8IHq4Dh" Name="Update">
                   <Pin Id="B3qkFa1L87TN2fs4DZPGLC" MergeId="229946" Name="Result" Kind="OutputPin" Bounds="350,637" />
                 </Patch>
@@ -261,12 +259,13 @@
                     <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
                   </p:ValueBoxSettings>
                 </Pad>
-                <ControlPoint Id="DbWmVN7ogC4Px1UKG7iWiV" Bounds="329,382" />
               </Patch>
-              <ControlPoint Id="P9ViIQeNbWJPl2vrWgvNWj" Bounds="73,127" Alignment="Top" />
+              <ControlPoint Id="P9ViIQeNbWJPl2vrWgvNWj" Bounds="73,126" Alignment="Top" />
               <ControlPoint Id="NdUu49hZ8sIPtREKTlZJqs" Bounds="105,1056" Alignment="Bottom" />
+              <ControlPoint Id="VgCnwXkkTZqO2MQv4dNa6z" Bounds="278,126" Alignment="Top" />
             </Node>
             <ControlPoint Id="LgSx9nvSDQjPshg2p9XW8z" Bounds="105,1118" />
+            <ControlPoint Id="DbWmVN7ogC4Px1UKG7iWiV" Bounds="278,74" />
           </Canvas>
           <Patch Id="E4vUPW2bF8gQTP4eBnmEiP" Name="Create" />
           <Patch Id="IvJmy0V07TOOmsA6kTZ1ek" Name="Update">
@@ -275,6 +274,7 @@
                 <Choice Kind="TypeFlag" Name="String" />
               </p:TypeAnnotation>
             </Pin>
+            <Pin Id="VJQqagOywj6PUaRS37WoBE" Name="Enable Color" Kind="InputPin" />
             <Pin Id="FeRHfuJptLcLK1hkkWnBE0" Name="Result" Kind="OutputPin" Bounds="350,637" />
           </Patch>
           <ProcessDefinition Id="IESGaCbZn32PuUdE6uefFv">
@@ -320,8 +320,9 @@
           <Link Id="Ab9QSJuXSWcQMdZUvSk4p1" Ids="GxZTSvw0H0ZQBFef0wfU3q,TiwrYdrgXaKLWJQGajdXPX" />
           <Link Id="CpezA2LnQT2PoiEiTqb8sA" Ids="OhGF4lUrBnOPQtcSZbaTv1,CQV2tcww92BPLHrYiHyZ6c" />
           <Link Id="QkDtrNMDvJbPYQ4hfjp1LL" Ids="HLL4JtRyeC5NJbtCkhaeEQ,Sz63WBOxVTlPSAODyIEm8u" />
-          <Link Id="RGxRfM8CIkFNslnSM20taU" Ids="DbWmVN7ogC4Px1UKG7iWiV,Ugttn0fwTgNNiUHsJb1ZAT" />
-          <Link Id="FUG9Er8vZnEM9lZntAyQ1Y" Ids="IPdKWyETc9uMeizs6ajX1E,DbWmVN7ogC4Px1UKG7iWiV" IsHidden="true" />
+          <Link Id="FUG9Er8vZnEM9lZntAyQ1Y" Ids="VJQqagOywj6PUaRS37WoBE,DbWmVN7ogC4Px1UKG7iWiV" IsHidden="true" />
+          <Link Id="UMDF6vWXRd8N3ia5RGLtME" Ids="DbWmVN7ogC4Px1UKG7iWiV,VgCnwXkkTZqO2MQv4dNa6z" />
+          <Link Id="RfOgSgnpTWHO2dlZOCfGYu" Ids="VgCnwXkkTZqO2MQv4dNa6z,Ugttn0fwTgNNiUHsJb1ZAT" />
         </Patch>
       </Node>
       <!--
@@ -2058,6 +2059,7 @@
                   <Choice Kind="ProcessAppFlag" Name="Astra" />
                 </p:NodeReference>
                 <Pin Id="Pr6DijRAgEgOIWb40JnhAH" Name="Connection String" Kind="InputPin" />
+                <Pin Id="V5b9EFnrz3uPADKoaWfNVD" Name="Enable Color" Kind="InputPin" />
                 <Pin Id="GikxE7aXxjJLQwWSJXAiyt" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="281,334,65,19" Id="AnWr7tj4waoMICESGHbcBs">
@@ -2153,13 +2155,14 @@
           </p:NodeReference>
           <Patch Id="RCOzrsMvbDgL7yPoGEekSL">
             <Canvas Id="HYQoF24LRWDPuKpthHcgXR" CanvasType="Group">
-              <ControlPoint Id="T5TZTSjD9BAOPrSKzLNeWk" Bounds="34,218" />
+              <ControlPoint Id="T5TZTSjD9BAOPrSKzLNeWk" Bounds="34,217" />
               <Node Bounds="32,49,40,19" Id="F6XPbOUaTEPNWfZ0cweg41">
                 <p:NodeReference LastCategoryFullName="Devices.Astra" LastSymbolSource="VL.Devices.Astra.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Astra" />
                 </p:NodeReference>
                 <Pin Id="Pkp7HnqUxyJNthvNNw4eNd" Name="Connection String" Kind="InputPin" />
+                <Pin Id="TcELlTDOOcrL0kQDnMWvSe" Name="Enable Color" Kind="InputPin" />
                 <Pin Id="JNzeCIvjylsLQAimN1beco" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="32,86,65,19" Id="ExGLdyr94p1QQwMzrGFqA6">
@@ -2183,6 +2186,7 @@
                   <Choice Kind="ProcessAppFlag" Name="Astra" />
                 </p:NodeReference>
                 <Pin Id="Ka59XbjlVhVMCJnUj4yF28" Name="Connection String" Kind="InputPin" />
+                <Pin Id="ISlWbghZTYlPg0GWzTpVxk" Name="Enable Color" Kind="InputPin" />
                 <Pin Id="ONo0HtW1VpwOvjZ1RJWZxe" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="145,87,65,19" Id="Ljqdx433WnNPGLsIAT7iat">
@@ -2206,6 +2210,7 @@
                   <Choice Kind="ProcessAppFlag" Name="Astra" />
                 </p:NodeReference>
                 <Pin Id="TEBrabUGKvKMv8yw6TVHhN" Name="Connection String" Kind="InputPin" />
+                <Pin Id="DKEoCBYF8bULOxLwwIlGLG" Name="Enable Color" Kind="InputPin" />
                 <Pin Id="MIIRUPuldGELb0dJ2Q4qvF" Name="Result" Kind="OutputPin" />
               </Node>
               <Node Bounds="266,86,65,19" Id="N81gbOV5kNKOvHotGff2wh">
@@ -2223,7 +2228,7 @@
                   <Choice Kind="TypeFlag" Name="String" />
                 </p:TypeAnnotation>
               </Pad>
-              <Node Bounds="32,168,45,19" Id="L2ZJK3oQxJwNl65Q5QQTZR">
+              <Node Bounds="32,166,45,19" Id="L2ZJK3oQxJwNl65Q5QQTZR">
                 <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="Cons" />
@@ -2234,10 +2239,28 @@
                 <Pin Id="ShP1si9TTa7LOWqHBV43g8" Name="Input 3" Kind="InputPin" />
                 <Pin Id="D2Ctd2EI6egL1ubwq31GMR" Name="Result" Kind="OutputPin" />
               </Node>
+              <Node Bounds="185,166,45,19" Id="KLeY6BCGFcjLkMzvlOgxuF">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Cons" />
+                  <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="MFSrhKGoVBXOiqv5eQuS3h" Name="Input" Kind="StateInputPin" />
+                <Pin Id="EHdS8M3zDUTLo3409b4ri6" Name="Input 2" Kind="StateInputPin" />
+                <Pin Id="JhivReVXRajNP00jlq81fo" Name="Input 3" Kind="InputPin" />
+                <Pin Id="Tc8ALCqj6y4MARtU1922p8" Name="Result" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="KckNBMoWJxuNjFQUiqcBgE" Bounds="187,217" />
+              <Pad Id="GVpF3jgetGxQKy0TOlUqXA" Comment="Enable Color" Bounds="304,-40,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pad>
             </Canvas>
             <Patch Id="T9ZYA21QYHiLNLb1GlHOxE" Name="Create" />
             <Patch Id="D6cr0ZZyrFMLwhNjyfFPhk" Name="Update">
               <Pin Id="IeQezAgYkkFNazkKRRikrs" Name="Frames" Kind="OutputPin" Bounds="284,395" />
+              <Pin Id="Nzj6sjitiJzMREmMOKkRLw" Name="On Data" Kind="OutputPin" Bounds="185,217" />
             </Patch>
             <ProcessDefinition Id="FM6tUv3Cd1BPfujAlrsY2U">
               <Fragment Id="N1DpV5INcZSM5FI2JlfdEp" Patch="T9ZYA21QYHiLNLb1GlHOxE" Enabled="true" />
@@ -2254,6 +2277,14 @@
             <Link Id="SHT1eeUllWOPndbrN6Tn5x" Ids="SumcAIjR2skOD552DkUQy6,VFEFw1lUycmMCE2tbS68l3" />
             <Link Id="PmNLDWuAaOeMr0OBHm2Pm9" Ids="NqaXXxKS8yMPnD0Gj8ZU8s,ShP1si9TTa7LOWqHBV43g8" />
             <Link Id="L7OVvsGZWv6QaeXZAZdjbJ" Ids="D2Ctd2EI6egL1ubwq31GMR,T5TZTSjD9BAOPrSKzLNeWk" />
+            <Link Id="RphjvFrnQUVPmEX7vbYs1M" Ids="O5kwzpCIwIcPV6ErhCctVs,MFSrhKGoVBXOiqv5eQuS3h" />
+            <Link Id="Ry8ldKcSAKuLrp3LVmWYj0" Ids="C3QeTHJ3FapQDqNPHSQmTp,EHdS8M3zDUTLo3409b4ri6" />
+            <Link Id="MSgTE4QWjQTOgToAeoVNSO" Ids="DHA1QBddVCpNA52HcGO5Vz,JhivReVXRajNP00jlq81fo" />
+            <Link Id="TX9EiN1oVlRPDRTRA5o83z" Ids="Tc8ALCqj6y4MARtU1922p8,KckNBMoWJxuNjFQUiqcBgE" />
+            <Link Id="I8VzdKLzxQOLmdFCM3zCOu" Ids="KckNBMoWJxuNjFQUiqcBgE,Nzj6sjitiJzMREmMOKkRLw" IsHidden="true" />
+            <Link Id="VyxVOGITWHUP30bnp7rj7C" Ids="GVpF3jgetGxQKy0TOlUqXA,TcELlTDOOcrL0kQDnMWvSe" />
+            <Link Id="T9S89X28yjtLAA3M6FOgTn" Ids="GVpF3jgetGxQKy0TOlUqXA,ISlWbghZTYlPg0GWzTpVxk" />
+            <Link Id="PkKKu2FGYIYM8ENtx80o6J" Ids="GVpF3jgetGxQKy0TOlUqXA,DKEoCBYF8bULOxLwwIlGLG" />
           </Patch>
         </Node>
       </Canvas>
